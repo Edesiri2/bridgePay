@@ -1,0 +1,22 @@
+/* App.css */
+.app-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+.app-main-content {
+  flex: 1;
+  margin-left: 250px; /* Same as sidebar width */
+  padding: 24px;
+  background-color: #f8fafc;
+  min-height: 100vh;
+  width: 90%;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .app-main-content {
+    margin-left: 0;
+    padding: 16px;
+  }
+}

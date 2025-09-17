@@ -1,0 +1,503 @@
+.loan-module-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.loan-module-header {
+  margin-bottom: 30px;
+}
+
+.loan-module-header h1 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 8px;
+}
+
+.loan-module-header p {
+  color: #666;
+  font-size: 16px;
+}
+
+/* Summary Cards */
+.loan-summary-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.summary-card {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.card-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  background-color: #e6f0ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0066ff;
+  font-size: 20px;
+}
+
+.card-icon.pending {
+  background-color: #fff8e6;
+  color: #e6a700;
+}
+
+.card-icon.closed {
+  background-color: #e6f7ee;
+  color: #00a85a;
+}
+
+.card-icon.balance {
+  background-color: #f2e6ff;
+  color: #8a2be2;
+}
+
+.card-content h3 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 4px;
+  color: #1a1a1a;
+}
+
+.card-content p {
+  color: #666;
+  font-size: 14px;
+}
+
+/* Loan Management */
+.management-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.management-header h2 {
+  font-size: 22px;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.tab-controls {
+  display: flex;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  padding: 4px;
+}
+
+.tab-controls button {
+  padding: 8px 16px;
+  border: none;
+  background: none;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  color: #666;
+}
+
+.tab-controls button.tab-active {
+  background-color: white;
+  color: #0066ff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary {
+  background-color: #0066ff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 16px;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background-color 0.2s;
+}
+
+.btn-primary:hover {
+  background-color: #0055e0;
+}
+
+.no-loans {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: #fafafa;
+  border-radius: 12px;
+  border: 1px dashed #ddd;
+}
+
+.no-loans-icon {
+  font-size: 48px;
+  color: #ccc;
+  margin-bottom: 16px;
+}
+
+.no-loans h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #4d4d4d;
+}
+
+.no-loans p {
+  color: #888;
+  margin-bottom: 20px;
+}
+
+/* Tables */
+.loans-table-container,
+.transactions-table-container,
+.schedule-table-container {
+  background: white;
+  border-radius: 12px;
+  border: 1px solid #e0e0e0;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+.table-responsive {
+  overflow-x: auto;
+}
+
+.loans-table,
+.transactions-table,
+.schedule-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.loans-table th,
+.transactions-table th,
+.schedule-table th {
+  background-color: #f7f7f7;
+  padding: 16px;
+  text-align: left;
+  font-weight: 600;
+  color: #4d4d4d;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.loans-table td,
+.transactions-table td,
+.schedule-table td {
+  padding: 16px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.loans-table tr:last-child td,
+.transactions-table tr:last-child td,
+.schedule-table tr:last-child td {
+  border-bottom: none;
+}
+
+.loan-product .product-name {
+  font-weight: 500;
+  color: #1a1a1a;
+  margin-bottom: 4px;
+}
+
+.loan-product .loan-id {
+  font-size: 12px;
+  color: #888;
+}
+
+.loan-amount,
+.loan-balance {
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.interest-rate {
+  padding: 4px 8px;
+  background-color: #e6f0ff;
+  color: #0066ff;
+  border-radius: 4px;
+  display: inline-block;
+  font-weight: 500;
+}
+
+.next-payment .payment-date {
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.next-payment .payment-amount {
+  font-size: 12px;
+  color: #666;
+}
+
+.status-badge {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: capitalize;
+  display: inline-block;
+}
+
+.status-badge.active {
+  background-color: #e6f7ee;
+  color: #00a85a;
+}
+
+.status-badge.pending {
+  background-color: #fff8e6;
+  color: #e6a700;
+}
+
+.status-badge.closed {
+  background-color: #f0f0f0;
+  color: #666;
+}
+
+.status-badge.paid {
+  background-color: #e6f7ee;
+  color: #00a85a;
+}
+
+.status-badge.upcoming {
+  background-color: #e6f0ff;
+  color: #0066ff;
+}
+
+.type-badge {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: capitalize;
+  display: inline-block;
+}
+
+.type-badge.repayment {
+  background-color: #e6f7ee;
+  color: #00a85a;
+}
+
+.type-badge.disbursement {
+  background-color: #e6f0ff;
+  color: #0066ff;
+}
+
+.table-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.icon-btn {
+  background: none;
+  border: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #666;
+  transition: all 0.2s;
+}
+
+.icon-btn:hover {
+  background-color: #f5f5f5;
+  color: #0066ff;
+}
+
+/* Modal */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.modal-content {
+  background: white;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 600px;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.modal-header h2 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.close-button {
+  background: none;
+  border: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #666;
+  transition: all 0.2s;
+}
+
+.close-button:hover {
+  background-color: #f5f5f5;
+  color: #e00;
+}
+
+.loan-application-form {
+  padding: 20px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-weight: 500;
+  color: #4d4d4d;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: border-color 0.2s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #0066ff;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.btn-secondary {
+  background-color: #f5f5f5;
+  color: #4d4d4d;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 10px 20px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-secondary:hover {
+  background-color: #e8e8e8;
+}
+
+.submit-btn {
+  background-color: #0066ff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 20px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.submit-btn:hover {
+  background-color: #0055e0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .management-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  
+  .header-actions {
+    width: 100%;
+    justify-content: space-between;
+  }
+  
+  .tab-controls {
+    width: 100%;
+    overflow-x: auto;
+  }
+  
+  .loan-summary-cards {
+    grid-template-columns: 1fr;
+  }
+  
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+  
+  .form-actions {
+    flex-direction: column;
+  }
+  
+  .loans-table,
+  .transactions-table,
+  .schedule-table {
+    font-size: 14px;
+  }
+  
+  .loans-table th,
+  .loans-table td,
+  .transactions-table th,
+  .transactions-table td,
+  .schedule-table th,
+  .schedule-table td {
+    padding: 12px 8px;
+  }
+}
