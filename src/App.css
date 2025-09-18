@@ -1,19 +1,21 @@
 /* App.css */
-.app-container {
+
+ .app-container {
   display: flex;
   min-height: 100vh;
+  width: 100%
 }
 
 .app-main-content {
   flex: 1;
-  margin-left: 250px; /* Same as sidebar width */
   padding: 24px;
+  margin-left: 250px;
   background-color: #f8fafc;
   min-height: 100vh;
-  width: 90%;
-}
+  width: 70%;
+} 
 
-/* Responsive design */
+/* Responsive design*/
 @media (max-width: 768px) {
   .app-main-content {
     margin-left: 0;

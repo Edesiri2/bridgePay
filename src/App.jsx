@@ -14,7 +14,7 @@ import PaymentLink from "./pages/PaymentLink";
 
 function AppLayout() {
   return (
-    <div className="">
+    <div className="app-container">
       {/* Sidebar */}
       <Sidebar />
 
