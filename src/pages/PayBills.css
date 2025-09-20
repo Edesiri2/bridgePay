@@ -1,0 +1,398 @@
+/* PayBills.css */
+.paybills-container {
+  padding: 20px;
+  background-color: #f5f9fc;
+  min-height: 100vh;
+}
+
+.paybills-header {
+  margin-bottom: 25px;
+}
+
+.paybills-header h1 {
+  color: #008080;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.paybills-header p {
+  color: #7f8c8d;
+  font-size: 16px;
+}
+
+.paybills-tabs {
+  display: flex;
+  overflow-x: auto;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 20px;
+  padding-bottom: 5px;
+}
+
+.paybills-tabs button {
+  padding: 12px 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  color: #7f8c8d;
+  position: relative;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.paybills-tabs button.tab-active {
+  color: #008080;
+  font-weight: 500;
+}
+
+.paybills-tabs button.tab-active::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #008080;
+}
+
+.paybills-content {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.saved-beneficiaries {
+  margin-bottom: 15px;
+}
+
+.saved-beneficiaries h2 {
+  color: #2c3e50;
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.beneficiaries-list {
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;
+  padding-bottom: 10px;
+}
+
+.beneficiary-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  min-width: 120px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.beneficiary-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.beneficiary-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #e8f5f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #008080;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.beneficiary-details h3 {
+  font-size: 14px;
+  color: #2c3e50;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.beneficiary-details p {
+  font-size: 12px;
+  color: #7f8c8d;
+  text-align: center;
+}
+
+.providers-section h2 {
+  color: #2c3e50;
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.providers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 15px;
+}
+
+.provider-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 15px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.provider-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.provider-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #e8f5f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #008080;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.provider-name {
+  font-weight: 500;
+  color: #2c3e50;
+  text-align: center;
+  font-size: 14px;
+}
+
+.recent-bills {
+  margin-top: 20px;
+}
+
+.recent-bills h2 {
+  color: #2c3e50;
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.bills-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.bill-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.bill-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.bill-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #e8f5f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #008080;
+}
+
+.bill-details h3 {
+  font-size: 16px;
+  color: #2c3e50;
+  margin-bottom: 4px;
+}
+
+.bill-details p {
+  font-size: 14px;
+  color: #7f8c8d;
+  margin: 0;
+}
+
+.bill-amount {
+  font-weight: 600;
+  color: #e74c3c;
+}
+
+/* Modal Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: white;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 500px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.modal-header h3 {
+  margin: 0;
+  color: #2c3e50;
+}
+
+.modal-close {
+  background: none;
+  border: none;
+  font-size: 18px;
+  color: #7f8c8d;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.modal-close:hover {
+  color: #2c3e50;
+}
+
+.bill-form {
+  padding: 20px;
+}
+
+.data-plans {
+  margin-bottom: 20px;
+}
+
+.data-plans h4 {
+  color: #2c3e50;
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+.plans-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.plan-card {
+  padding: 15px 10px;
+  background-color: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.plan-card:hover {
+  border-color: #008080;
+}
+
+.plan-card.selected {
+  background-color: #e8f5f5;
+  border-color: #008080;
+}
+
+.plan-name {
+  font-weight: 500;
+  color: #2c3e50;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.plan-price {
+  font-weight: 600;
+  color: #008080;
+  margin-bottom: 3px;
+}
+
+.plan-validity {
+  font-size: 12px;
+  color: #7f8c8d;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: #2c3e50;
+  font-weight: 500;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+.submit-btn {
+  width: 100%;
+  background-color: #008080;
+  color: white;
+  border: none;
+  padding: 15px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+  background-color: #006666;
+}
+
+@media (max-width: 768px) {
+  .paybills-tabs {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+  }
+  
+  .providers-grid {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  }
+  
+  .beneficiaries-list {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+  }
+  
+  .plans-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

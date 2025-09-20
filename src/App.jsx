@@ -8,9 +8,11 @@ import Dashboard from "./pages/Dashboard";
 import Accounts from "./pages/Accounts";
 import Loans from "./pages/LoanModule";
 import Transfer from "./pages/Transfer";
+import Budget from "./pages/Budget";
 import Support from "./pages/Support";
 import "./App.css"; 
 import PaymentLink from "./pages/PaymentLink";
+import PayBills from "./pages/PayBills";
 
 function AppLayout() {
   return (
@@ -28,6 +30,8 @@ function AppLayout() {
            <Route path="/paymentlink" element={<PaymentLink />} />
           <Route path="/support" element={<Support />} />
           <Route path="/auth" element={<Auth />} />
+            <Route path="/bills" element={<PayBills />} />
+          <Route path="/budget" element={<Budget />} />
 
           {/* Fallback → Dashboard */}
           <Route path="*" element={<Dashboard />} />
