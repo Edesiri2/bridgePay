@@ -2,6 +2,7 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { AuthProvider } from "./context/AuthContext";
+import "@fortawesome/fontawesome-free/css/all.min.css";
 import Sidebar from "./components/Sidebar";
 import Auth from "./pages/Auth";
 import Dashboard from "./pages/Dashboard";
