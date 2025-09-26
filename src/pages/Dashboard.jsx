@@ -66,7 +66,7 @@ const QuickActions = () => {
     { icon: 'fa-exchange-alt', title: 'Transfer', link: '/transfer', color: 'teal-bg' },
     { icon: 'fa-plus-circle', title: 'Deposit', link: '/deposit', color: 'blue-bg' },
     { icon: 'fa-hand-holding-usd', title: 'Loan', link: '/loans', color: 'yellow-bg' },
-    { icon: 'fa-bill', title: 'Pay Bills', link: '/bills', color: 'purple-bg' },
+    { icon: 'fa-bank', title: 'Pay Bills', link: '/bills', color: 'purple-bg' },
     { icon: 'fa-chart-pie', title: 'Budget', link: '/budget', color: 'green-bg' },
     { icon: 'fa-cog', title: 'Settings', link: '/settings', color: 'gray-bg' },
   ];
